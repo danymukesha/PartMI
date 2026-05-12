@@ -1,7 +1,6 @@
-# PartMI
+# PartMI <a href="https://danymukesha.github.io/PartMI/"><img src="man/figures/logo.png" align="right" align="right" height="90" alt="PartMI website" /></a>
 
-## {Part Mutual Information for Direct Association Networks}
-<a href="https://danymukesha.github.io/PartMI/"><img src="man/figures/logo.png" align="right" align="right" height="90" alt="PartMI website" /></a>
+{Part Mutual Information for Direct Association Networks} 
 
 <!--
 [![R-CMD-check](https://github.com/danymukesha/PartMI/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/danymukesha/PartMI/actions/workflows/R-CMD-check.yaml)
