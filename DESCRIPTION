@@ -1,6 +1,6 @@
 Package: PartMI
 Title: Part Mutual Information for Direct Association Network Inference
-Version: 0.1.0
+Version: 0.0.99
 Authors@R: c(
     person("Dany", "Mukesha", , "danymukesha@gmail.com", 
             role = c("aut", "cre"),
