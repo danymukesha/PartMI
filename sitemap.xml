@@ -1,0 +1,27 @@
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/articles/PartMI.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/reference/PartMI-package.html</loc></url>
+<url><loc>/reference/discretize_data.html</loc></url>
+<url><loc>/reference/dot-chebyshev_dist.html</loc></url>
+<url><loc>/reference/dot-digamma.html</loc></url>
+<url><loc>/reference/dot-discretize.html</loc></url>
+<url><loc>/reference/dot-mi_binning.html</loc></url>
+<url><loc>/reference/dot-mi_knn.html</loc></url>
+<url><loc>/reference/dot-pmi_binning.html</loc></url>
+<url><loc>/reference/dot-pmi_knn.html</loc></url>
+<url><loc>/reference/dot-quantile_norm.html</loc></url>
+<url><loc>/reference/dot-rank_intnorm.html</loc></url>
+<url><loc>/reference/dot-scale_unit.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/mi.html</loc></url>
+<url><loc>/reference/normalize_data.html</loc></url>
+<url><loc>/reference/pmi.html</loc></url>
+<url><loc>/reference/pmi_network.html</loc></url>
+<url><loc>/reference/print.pmi_network.html</loc></url>
+</urlset>
+
