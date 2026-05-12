@@ -1,0 +1,130 @@
+---
+title: "Introduction to PartMI"
+author: "Dany Mukesha"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to PartMI}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4
+)
+```
+
+## What is Part Mutual Information?
+
+Part Mutual Information (PMI) quantifies the direct association between two variables $X$ and $Y$ after removing the influence of a set of conditioning variables $Z$:
+
+$$
+PMI(X; Y | Z) = \sum_{x,y,z} P(x,y,z) \log \frac{P(x,y|z)}{P(x|z)P(y|z)}
+$$
+
+This is mathematically equivalent to Conditional Mutual Information (CMI), but applied specifically to the problem of direct association network inference.
+
+### Why not just use correlation?
+
+Consider three genes A, B, C where A regulates B and B regulates C. Standard correlation or mutual information will show a false positive association between A and C (indirect edge). PMI conditioning on B correctly identifies no direct A-C link.
+
+## Installation
+
+```{r, eval = FALSE}
+remotes::install_github("danymukesha/PartMI")
+```
+
+## Basic Usage
+
+### Mutual Information
+
+```{r mi_example}
+library(PartMI)
+set.seed(42)
+
+# Independent variables
+x <- rnorm(200)
+y <- rnorm(200)
+mi(x, y)  # near zero
+
+# Dependent variables
+y_dep <- x + rnorm(200, 0, 0.3)
+mi(x, y_dep)  # positive value
+```
+
+### Part Mutual Information
+
+```{r pmi_example}
+# Common cause scenario
+z <- rnorm(200)
+x <- 0.7 * z + rnorm(200, 0, 0.5)
+y <- 0.7 * z + rnorm(200, 0, 0.5)
+
+# MI shows spurious association
+mi_xy <- mi(x, y)
+mi_xy
+
+# PMI removes the common cause
+pmi_xy <- pmi(x, y, z)
+pmi_xy
+```
+
+### Network Inference
+
+```{r network_example}
+# Simulate a small regulatory network
+n_obs <- 100
+TF1  <- rnorm(n_obs)
+TF2  <- rnorm(n_obs)
+Gene1 <- 0.8 * TF1 + rnorm(n_obs, 0, 0.4)
+Gene2 <- 0.6 * TF2 + rnorm(n_obs, 0, 0.4)
+Gene3 <- 0.5 * Gene1 + 0.3 * TF2 + rnorm(n_obs, 0, 0.3)
+Noise <- rnorm(n_obs)
+
+dat <- data.frame(TF1, TF2, Gene1, Gene2, Gene3, Noise)
+
+net <- pmi_network(dat, n_permutations = 50, threshold = 0.05)
+
+# View the adjacency matrix
+print(net$adjacency)
+
+# Summary
+print(net)
+```
+
+## Estimation Methods
+
+### Binning (default)
+
+Fast histogram-based estimator. Good for exploratory analysis. Control granularity with the `bins` parameter.
+
+```{r binning}
+pmi(x, y, z, method = "binning", bins = 10)
+```
+
+### k-Nearest Neighbor (kNN)
+
+More accurate, especially for higher-dimensional Z. Based on the Frenzel-Pompe estimator. Control bias-variance tradeoff with `k`.
+
+```{r knn}
+pmi(x, y, z, method = "knn", k = 5)
+```
+
+## Preprocessing
+
+```{r preprocessing}
+normalize_data(dat, method = "zscore")
+normalize_data(dat, method = "rank")
+normalize_data(dat, method = "quantile")
+discretize_data(dat, bins = 5)
+```
+
+## References
+
+1. Zhao et al. (2016) "Part mutual information for quantifying direct associations in networks." *PNAS* 113(18): 5130-5135.
+2. Frenzel & Pompe (2007) "Partial Mutual Information for Coupling Analysis of Multivariate Time Series." *Physical Review Letters* 99(20): 204101.
+3. Kraskov, Stögbauer & Grassberger (2004) "Estimating mutual information." *Physical Review E* 69(6): 066138.

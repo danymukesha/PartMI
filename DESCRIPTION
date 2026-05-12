@@ -1,0 +1,32 @@
+Package: PartMI
+Title: Part Mutual Information for Direct Association Network Inference
+Version: 0.1.0
+Authors@R: c(
+    person("Dany", "Mukesha", , "danymukesha@gmail.com", 
+            role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0001-9514-751X")),
+    person("Zhao", "et al.", role = "ctb", comment = "Original PMI method")
+  )
+Description: Implements Part Mutual Information (PMI) for inferring direct 
+    associations in biological networks. PMI extends mutual information by 
+    conditioning on background variables, removing indirect dependencies and 
+    reducing false-positive edges in network reconstruction. Suitable for gene 
+    regulatory network inference from high-throughput expression data. 
+    Includes binning-based and k-nearest-neighbor estimators for both mutual 
+    information (MI) and part mutual information (PMI/CMI).
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports:
+    stats
+Suggests:
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown,
+    igraph
+VignetteBuilder: knitr
+NeedsCompilation: no
+URL: https://github.com/danymukesha/PartMI
+BugReports: https://github.com/danymukesha/PartMI/issues
