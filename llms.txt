@@ -93,3 +93,4 @@ pmi(x, y, z)  # ~ 0 (correct)
 ### All vignettes
 
 - [Introduction to PartMI](PartMI.md):
+- [UNKNOWN TITLE](Theory.md):

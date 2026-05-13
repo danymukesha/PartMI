@@ -3,4 +3,5 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   PartMI: PartMI.html
-last_built: 2026-05-12T15:24Z
+  Theory: Theory.html
+last_built: 2026-05-13T08:42Z
