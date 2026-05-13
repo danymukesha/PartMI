@@ -1,22 +1,14 @@
 ---
-title: "Part Information-Based Network Inference"
+title: "Information-Based Network Inference"
 author: "Dany Mukesha"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Part Information-Based Network Inference}
+  %\VignetteIndexEntry{Information-Based Network Inference}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.width = 6,
-  fig.height = 4
-)
-```
 One promising area that is currently underutilized in mainstream biology/bioinformatics, 
 despite being computationally efficient and solvable on a standard PC, 
 is **Information-Based Network Inference using "Part Mutual Information" (PMI)**.
@@ -55,7 +47,7 @@ It is possible to use publicly available data from the **TCGA (The Cancer Genome
    
     $$I(X; Y) = \sum \sum P(x, y) \log \frac{P(x, y)}{P(x)P(y)}$$
     
-    THe <PartMI> package already implements the **PMI** formula, which uses a "partial" joint probability. 
+    The PartMI package already implements the **PMI** formula, which uses a "partial" joint probability. 
     This allows you to see if $X$ and $Y$ are actually talking to each other, or if they just look like
     they are because $Z$ is talking to both of them.
 
