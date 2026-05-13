@@ -1,3 +1,22 @@
+---
+title: "Part Information-Based Network Inference"
+author: "Dany Mukesha"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Part Information-Based Network Inference}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4
+)
+```
 One promising area that is currently underutilized in mainstream biology/bioinformatics, 
 despite being computationally efficient and solvable on a standard PC, 
 is **Information-Based Network Inference using "Part Mutual Information" (PMI)**.
