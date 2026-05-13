@@ -1,9 +1,5 @@
 # PMI compared with traditional methods
 
-To understand why **Part Mutual Information (PMI)** is a superior choice
-for your implementation, we need to compare it against the “industry
-standards” currently used in biology.
-
 In bioinformatics, we generally use three main types of methods to link
 genes or proteins together. Here is how PMI compares to them in terms of
 logic and performance.
