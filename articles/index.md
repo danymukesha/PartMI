@@ -2,5 +2,7 @@
 
 ### All vignettes
 
-- [Introduction to PartMI](PartMI.md):
-- [Part Information-Based Network Inference](Theory.md):
+- [Introduction to
+  PartMI](https://danymukesha.github.io/PartMI/articles/PartMI.md):
+- [Information-Based Network
+  Inference](https://danymukesha.github.io/PartMI/articles/Theory.md):

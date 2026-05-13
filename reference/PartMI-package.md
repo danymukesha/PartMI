@@ -8,15 +8,20 @@ reconstruction.
 
 ## Core functions
 
-- [`mi`](mi.md) - Compute mutual information between two variables
+- [`mi`](https://danymukesha.github.io/PartMI/reference/mi.md) - Compute
+  mutual information between two variables
 
-- [`pmi`](pmi.md) - Compute part (conditional) mutual information
+- [`pmi`](https://danymukesha.github.io/PartMI/reference/pmi.md) -
+  Compute part (conditional) mutual information
 
-- [`pmi_network`](pmi_network.md) - Infer direct association network
+- [`pmi_network`](https://danymukesha.github.io/PartMI/reference/pmi_network.md) -
+  Infer direct association network
 
-- [`normalize_data`](normalize_data.md) - Normalize expression data
+- [`normalize_data`](https://danymukesha.github.io/PartMI/reference/normalize_data.md) -
+  Normalize expression data
 
-- [`discretize_data`](discretize_data.md) - Discretize continuous data
+- [`discretize_data`](https://danymukesha.github.io/PartMI/reference/discretize_data.md) -
+  Discretize continuous data
 
 ## References
 

@@ -51,11 +51,11 @@ pmi(x, y, z)  # ~ 0 (correct)
 
 | Function | Description |
 |----|----|
-| [`mi()`](reference/mi.md) | Mutual information (binning or kNN estimator) |
-| [`pmi()`](reference/pmi.md) | Part/conditional mutual information X vs Y given Z |
-| [`pmi_network()`](reference/pmi_network.md) | Build full network with significance testing |
-| [`normalize_data()`](reference/normalize_data.md) | Z-score, rank, minmax, or quantile normalization |
-| [`discretize_data()`](reference/discretize_data.md) | Quantile or equal-width discretization |
+| [`mi()`](https://danymukesha.github.io/PartMI/reference/mi.md) | Mutual information (binning or kNN estimator) |
+| [`pmi()`](https://danymukesha.github.io/PartMI/reference/pmi.md) | Part/conditional mutual information X vs Y given Z |
+| [`pmi_network()`](https://danymukesha.github.io/PartMI/reference/pmi_network.md) | Build full network with significance testing |
+| [`normalize_data()`](https://danymukesha.github.io/PartMI/reference/normalize_data.md) | Z-score, rank, minmax, or quantile normalization |
+| [`discretize_data()`](https://danymukesha.github.io/PartMI/reference/discretize_data.md) | Quantile or equal-width discretization |
 
 ## References
 

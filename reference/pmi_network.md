@@ -66,7 +66,8 @@ pmi_network(
 
 - ...:
 
-  Additional arguments passed to [`pmi`](pmi.md).
+  Additional arguments passed to
+  [`pmi`](https://danymukesha.github.io/PartMI/reference/pmi.md).
 
 ## Value
 

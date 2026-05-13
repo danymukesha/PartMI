@@ -1,4 +1,4 @@
-# Part Information-Based Network Inference
+# Information-Based Network Inference
 
 One promising area that is currently underutilized in mainstream
 biology/bioinformatics, despite being computationally efficient and
@@ -53,10 +53,10 @@ Cancer Genome Atlas)** or **GEO (Gene Expression Omnibus)**, using a
     I(X; Y) = \sum \sum P(x, y) \log \frac{P(x, y)}{P(x)P(y)}
     ```
 
-    THe package already implements the **PMI** formula, which uses a
-    “partial” joint probability. This allows you to see if $`X`$ and
-    $`Y`$ are actually talking to each other, or if they just look like
-    they are because $`Z`$ is talking to both of them.
+    The PartMI package already implements the **PMI** formula, which
+    uses a “partial” joint probability. This allows you to see if $`X`$
+    and $`Y`$ are actually talking to each other, or if they just look
+    like they are because $`Z`$ is talking to both of them.
 
 ### Why this hasn’t been widely implemented yet (I think!)
 
