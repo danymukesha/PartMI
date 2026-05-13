@@ -3,4 +3,4 @@
 ### All vignettes
 
 - [Introduction to PartMI](PartMI.md):
-- [UNKNOWN TITLE](Theory.md):
+- [Part Information-Based Network Inference](Theory.md):

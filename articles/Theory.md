@@ -1,4 +1,4 @@
-# 
+# Part Information-Based Network Inference
 
 One promising area that is currently underutilized in mainstream
 biology/bioinformatics, despite being computationally efficient and
